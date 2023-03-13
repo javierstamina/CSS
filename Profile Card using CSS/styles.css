@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #333;
+}
+
+
+.card {
+    background: linear-gradient(45deg, #000, #05283d);
+    border-radius: 20px;
+    border: 4px solid #fff;
+    width: 400px;
+    height: 220px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.card:hover {
+    height: 450px;
+    margin-top: 4rem;
+}
+
+/* SECTION FIGURE */
+
+.figure__image {
+    position: absolute;
+    left: 50%;
+    top: -24%;
+    transform: translateX(-50%);
+    width: 136px;
+    height: 136px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.figure__image img {
+    background-image: url('https://images.unsplash.com/photo-1529665253569-6d01c0eaf7b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=785&q=80');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 4px solid #fff;
+    border-radius: 50%;
+}
+
+.card:hover .figure__image {
+    width: 180px;
+    height: 180px;
+}
+
+/* SECTION DESCRIPTION */
+
+.section__description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    gap: 5px;
+}
+
+.description--title {
+    color: aliceblue;
+    letter-spacing: 4px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.section__description span {
+    font-size: 8px;
+    color: aliceblue;
+    opacity: 0.5;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* SECTION STATISTICS */
+
+.section__statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: aliceblue;
+    opacity: .5;
+    padding-top: 20px;
+    gap: 40px;
+    visibility: hidden;
+    transition: .1s;
+    transform: translateY(-180px, 150px);
+}
+
+.card:hover .section__statistics {
+    visibility: visible;
+    transform: translateY(0px);
+}
+
+.statistics--post span {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+}
+
+/* SECTION SOCIALS */
+
+.section__socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    opacity: .5;
+    gap: 30px;
+    visibility: hidden;
+    transition: .1s;
+    transform: translateY(-180px, 150px);
+}
+
+.card:hover .section__socials {
+    visibility: visible;
+    
+}
+
+.section__socials i {
+    color: aliceblue;
+    font-size: 25px;
+}
+
+/* SECTION BUTTONS */
+
+.section__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 490px;
+    gap: 25px;
+    visibility: hidden;
+    transition:  1s linear 0s;
+    transform: translateY(-180px, 150px);
+}
+
+.card:hover .section__buttons {
+    visibility: visible;
+    padding-top: 50px;
+}
+
+.section__buttons button {
+    padding: 10px 35px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttons--one {
+    background-color: #0c3b58;
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 700;
+    width: 150px;
+    letter-spacing: 2px;
+}
+
+.buttons--one:hover {
+    background-color: #1272ad;
+    color: aliceblue;
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+.buttons--two {
+    background-color: aliceblue;
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    width: 150px;
+    letter-spacing: 2px;
+}
+
+.buttons--two:hover {
+    background-color: #333;
+    color: aliceblue;
+    transform: scale(1.1);
+    cursor: pointer;
+}
